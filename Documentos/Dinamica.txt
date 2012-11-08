@@ -1,0 +1,14 @@
+IDENTIFICAR SMELLS PARA REFACTORING
+- Todos lean las hojas de refactorings.
+- Preguntar si se necesita aclarar alguno.
+- Preguntar si alguien puede responder a esa duda.
+- En parejas identificar que refactorings se aplica a sus smells.
+
+REFACTORIZAR
+ORDER
+- Quien ha encontrado un smell en order.
+- Quien ha encontrado este smell en este pedazo de código.
+- Que refactor aplica a este pedazo de código?
+- Así más o menos se refactoriza o es este aplica más.
+EN QUE OTRAS CLASES HAN ENCONTRADO SMELLS
+- Que NO lo hagan guiado y si se encuentran con algún problema me avisan.

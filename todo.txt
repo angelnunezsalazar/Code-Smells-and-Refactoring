@@ -1,9 +1,14 @@
 MEJORAS DE DINAMICA CODE SMELLS
-- Smells en español
-- Hacer dinámica de conexión (la primera C)
-- Tener balotas preparadas - Orden de prioridad
-- Mejorar claridad de la tabla (Headers, Logo de OET)
-- Dividir los steps del ejercicio en slides diferentes
-- Distribución de la sala (no ayudaba a que naturalmente se creen las tribus). Deberíamos explotar el tema de teer whiteboards en las paredes. (como?)
+- Mejorar la dinámica de conexión (la primera C)
+- Distribución de la sala (no ayudaba a que naturalmente se creen las tribus). 
+  Deberíamos explotar el tema de teer whiteboards en las paredes. (como?)
 - Evitar un solo engament group?
-- Analogías graciosas con los nombres de los smells
+
+IDEAS
+
+- Explicar la descripción, causa y el problema.
+- Luego de identificar smells vs refactorings, indentificar los mas usados refactorings.
+- Refactorings Inversos.
+- Refactoring to Patterns (Qué refactorings utilizaríamos para evolucionar en los patrones)
+- Gen-A Refactorings.
+- Al inicio del día 2, discutir sobre preguntas que les vamos a dar?

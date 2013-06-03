@@ -55,7 +55,7 @@
   <ItemGroup>
     <ProjectReference Include="..\After\OnlineStore.After.csproj">
       <Project>{6B3F4616-7CC7-46DD-8B85-E849C66DE17A}</Project>
-      <Name>After</Name>
+      <Name>OnlineStore.After</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

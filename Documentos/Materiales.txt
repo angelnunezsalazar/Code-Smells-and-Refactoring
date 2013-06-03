@@ -1,0 +1,17 @@
+IMPRESIONES
+----------------
+Por cada Persona:
+- Technical Debt
+- Code smells
+- Refactorings
+- Tabla en Blanco
+
+Para el Instructor:
+- Una Hoja de Solución Smells y Refactoring
+
+MATERIALES
+----------
+- Papelografos
+- 1 Lapicero por persona
+- 1 Plumón por persona
+- Post its.

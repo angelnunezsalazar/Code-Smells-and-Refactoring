@@ -5,10 +5,9 @@ MEJORAS DE DINAMICA CODE SMELLS
 - Evitar un solo engament group?
 
 IDEAS
-
 - Explicar la descripción, causa y el problema.
 - Luego de identificar smells vs refactorings, indentificar los mas usados refactorings.
-- Refactorings Inversos.
 - Refactoring to Patterns (Qué refactorings utilizaríamos para evolucionar en los patrones)
 - Gen-A Refactorings.
 - Al inicio del día 2, discutir sobre preguntas que les vamos a dar?
+- Ejercicios pequeños para marcar de Refactorings y Code Smells.

@@ -4,7 +4,8 @@ Por cada Persona:
 - Technical Debt
 - Code smells
 - Refactorings
-- Tabla en Blanco
+- Identificar Smells y Refactorings (Ejercicio)
+- Reverse Refactorings (Ejercicio)
 
 Para el Instructor:
 - Una Hoja de Solución Smells y Refactoring

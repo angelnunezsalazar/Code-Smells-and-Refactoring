@@ -26,47 +26,43 @@ namespace MovieRental.ClassLibrary
         {
             this.AmountOwed = 0;
             this.FrequentRenterPoints = 0;
-            string result = "Rental Record for " + Name + "\n";
-
-            foreach (var rental in this.rentals)
-            {
-                double thisAmount = 0;
-
-                //determine amounts for each line
-                switch (rental.Movie.PriceCode)
-                {
-                    case PriceCodes.Regular:
-                        thisAmount += 2;
-                        if (rental.DaysRented > 2)
-                            thisAmount += (rental.DaysRented - 2) * 1.5;
-                        break;
-                    case PriceCodes.NewRelease:
-                        thisAmount += rental.DaysRented * 3;
-                        break;
-                    case PriceCodes.Childrens:
-                        thisAmount += 1.5;
-                        if (rental.DaysRented > 3)
-                            thisAmount += (rental.DaysRented - 3) * 1.5;
-                        break;
-                }
-                // add frequent renter points
-                this.FrequentRenterPoints = this.FrequentRenterPoints + 1;
-
-                // add bonus for a two day new release rental
-                if ((rental.Movie.PriceCode == PriceCodes.NewRelease) && rental.DaysRented > 1)
-                    this.FrequentRenterPoints = this.FrequentRenterPoints + 1;
-
-                //show figures for this rental
-                result += "\t" + rental.Movie.Title + "\t" + thisAmount.ToString("0.0") + "\n";
-
-                this.AmountOwed = this.AmountOwed + thisAmount;
-            }
-
-            //add footer lines
-            result += "You owed " + this.AmountOwed.ToString("0.0") + "\n";
-            result += "You earned " + this.FrequentRenterPoints + " frequent renter points\n";
+            var result = this.Header();
+            result += this.RentalLines();
+            result += this.Footer();
 
             return result;
+        }
+
+        private string Header()
+        {
+            return "Rental Record for " + this.Name + "\n";
+        }
+
+        private string RentalLines()
+        {
+            string rentalLines = "";
+            foreach (var rental in this.rentals)
+                rentalLines += this.RentalLine(rental);
+            return rentalLines;
+        }
+
+        private string RentalLine(Rental rental)
+        {
+            var rentalAmount = rental.AmountFor();
+            this.AmountOwed += rentalAmount;
+            this.FrequentRenterPoints += rental.FrecuentRenterPoints();
+
+            return FormatRentaLine(rental, rentalAmount);
+        }
+
+        private static string FormatRentaLine(Rental rental, double rentalAmount)
+        {
+            return "\t" + rental.Movie.Title + "\t" + rentalAmount.ToString("0.0") + "\n";
+        }
+
+        private string Footer()
+        {
+            return "You owed " + this.AmountOwed.ToString("0.0") + "\n" + "You earned " + this.FrequentRenterPoints + " frequent renter points\n";
         }
     }
 }

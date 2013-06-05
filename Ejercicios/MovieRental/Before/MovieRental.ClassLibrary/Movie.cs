@@ -1,13 +1,14 @@
 namespace MovieRental.ClassLibrary
 {
-    public enum PriceCodes
-    {
-        Regular,
-        NewRelease,
-        Childrens
-    }
     public class Movie
     {
+        public enum PriceCodes
+        {
+            Regular,
+            NewRelease,
+            Childrens
+        }
+
         public PriceCodes PriceCode { get; set; }
 
         public string Title { get; private set; }

@@ -35,15 +35,15 @@ namespace MovieRental.ClassLibrary
                 //determine amounts for each line
                 switch (rental.Movie.PriceCode)
                 {
-                    case PriceCodes.Regular:
+                    case Movie.PriceCodes.Regular:
                         thisAmount += 2;
                         if (rental.DaysRented > 2)
                             thisAmount += (rental.DaysRented - 2) * 1.5;
                         break;
-                    case PriceCodes.NewRelease:
+                    case Movie.PriceCodes.NewRelease:
                         thisAmount += rental.DaysRented * 3;
                         break;
-                    case PriceCodes.Childrens:
+                    case Movie.PriceCodes.Childrens:
                         thisAmount += 1.5;
                         if (rental.DaysRented > 3)
                             thisAmount += (rental.DaysRented - 3) * 1.5;
@@ -53,7 +53,7 @@ namespace MovieRental.ClassLibrary
                 this.FrequentRenterPoints = this.FrequentRenterPoints + 1;
 
                 // add bonus for a two day new release rental
-                if ((rental.Movie.PriceCode == PriceCodes.NewRelease) && rental.DaysRented > 1)
+                if ((rental.Movie.PriceCode == Movie.PriceCodes.NewRelease) && rental.DaysRented > 1)
                     this.FrequentRenterPoints = this.FrequentRenterPoints + 1;
 
                 //show figures for this rental

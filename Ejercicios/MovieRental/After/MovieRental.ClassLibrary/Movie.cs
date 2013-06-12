@@ -1,13 +1,14 @@
 namespace MovieRental.ClassLibrary
 {
-    public enum PriceCodes
+    public abstract class Movie
     {
-        Regular,
-        NewRelease,
-        Childrens
-    }
-    public class Movie
-    {
+        public enum PriceCodes
+        {
+            Regular,
+            NewRelease,
+            Childrens
+        }
+
         public PriceCodes PriceCode { get; set; }
 
         public string Title { get; private set; }
@@ -17,5 +18,7 @@ namespace MovieRental.ClassLibrary
             this.Title = title;
             this.PriceCode = priceCode;
         }
+
+        public abstract double LineAmount(int daysRented);
     }
 }

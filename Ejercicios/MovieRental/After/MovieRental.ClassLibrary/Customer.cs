@@ -26,8 +26,9 @@ namespace MovieRental.ClassLibrary
         {
             this.AmountOwed = 0;
             this.FrequentRenterPoints = 0;
+
             var result = this.Header();
-            result += this.RentalLines();
+            result += this.CalculateRental();
             result += this.Footer();
 
             return result;
@@ -38,31 +39,28 @@ namespace MovieRental.ClassLibrary
             return "Rental Record for " + this.Name + "\n";
         }
 
-        private string RentalLines()
+        private string CalculateRental()
         {
-            string rentalLines = "";
+            string result = "";
             foreach (var rental in this.rentals)
-                rentalLines += this.RentalLine(rental);
-            return rentalLines;
-        }
+            {
+                var thisAmount = rental.LineAmount();
+                this.FrequentRenterPoints += rental.CalculateFrecuentPoints();
+                this.AmountOwed = this.AmountOwed + thisAmount;
 
-        private string RentalLine(Rental rental)
-        {
-            var rentalAmount = rental.AmountFor();
-            this.AmountOwed += rentalAmount;
-            this.FrequentRenterPoints += rental.FrecuentRenterPoints();
-
-            return FormatRentaLine(rental, rentalAmount);
-        }
-
-        private static string FormatRentaLine(Rental rental, double rentalAmount)
-        {
-            return "\t" + rental.Movie.Title + "\t" + rentalAmount.ToString("0.0") + "\n";
+                result += FormatLine(rental, thisAmount);
+            }
+            return result;
         }
 
         private string Footer()
         {
             return "You owed " + this.AmountOwed.ToString("0.0") + "\n" + "You earned " + this.FrequentRenterPoints + " frequent renter points\n";
+        }
+
+        private static string FormatLine(Rental rental, double thisAmount)
+        {
+            return "\t" + rental.Movie.Title + "\t" + thisAmount.ToString("0.0") + "\n";
         }
     }
 }

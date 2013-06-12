@@ -12,38 +12,18 @@ namespace MovieRental.ClassLibrary
             this.DaysRented = daysRented;
         }
 
-        public double AmountFor()
+        public double LineAmount()
         {
-            double thisAmount = 0;
-            switch (Movie.PriceCode)
-            {
-                case PriceCodes.Regular:
-                    thisAmount += 2;
-                    if (DaysRented > 2)
-                    {
-                        thisAmount += (DaysRented - 2) * 1.5;
-                    }
-                    break;
-                case PriceCodes.NewRelease:
-                    thisAmount += DaysRented * 3;
-                    break;
-                case PriceCodes.Childrens:
-                    thisAmount += 1.5;
-                    if (DaysRented > 3)
-                    {
-                        thisAmount += (DaysRented - 3) * 1.5;
-                    }
-                    break;
-            }
-            return thisAmount;
+            return this.Movie.LineAmount(DaysRented);
         }
 
-        public int FrecuentRenterPoints()
+        public int CalculateFrecuentPoints()
         {
-            var bonuesIsEarned = (Movie.PriceCode == PriceCodes.NewRelease) && DaysRented > 1;
-            if (bonuesIsEarned)
-                return 2;
-            return 1;
+            var frequentRenterPoints = 1;
+            var bonusForTwoDayRental = (Movie.PriceCode == Movie.PriceCodes.NewRelease) && DaysRented > 1;
+            if (bonusForTwoDayRental)
+                frequentRenterPoints = 2;
+            return frequentRenterPoints;
         }
     }
 }

@@ -19,12 +19,12 @@ namespace MovieRental.Tests
         public void SetUp()
         {
             customer = new Customer("Customer Name");
-            newRelease1 = new Movie("New Release 1", PriceCodes.NewRelease);
-            newRelease2 = new Movie("New Release 2", PriceCodes.NewRelease);
-            childrens = new Movie("Childrens", PriceCodes.Childrens);
-            regular1 = new Movie("Regular 1", PriceCodes.Regular);
-            regular2 = new Movie("Regular 2", PriceCodes.Regular);
-            regular3 = new Movie("Regular 3", PriceCodes.Regular);
+            newRelease1 = new MovieNewRelase("New Release 1");
+            newRelease2 = new MovieNewRelase("New Release 2");
+            childrens = new MovieChildren("Childrens");
+            regular1 = new MovieRegular("Regular 1");
+            regular2 = new MovieRegular("Regular 2");
+            regular3 = new MovieRegular("Regular 3");
         }
 
         [TestMethod]

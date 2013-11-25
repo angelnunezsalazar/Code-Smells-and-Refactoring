@@ -8,7 +8,7 @@ public class Movie
 
     public Movie(String title, PriceCodes priceCode)
     {
-        this.title = title;
+        this.setTitle(title);
         this.setPriceCode(priceCode);
     }
 
@@ -18,5 +18,13 @@ public class Movie
 
 	public void setPriceCode(PriceCodes priceCode) {
 		this.priceCode = priceCode;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 }

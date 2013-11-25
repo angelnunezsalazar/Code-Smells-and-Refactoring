@@ -11,3 +11,14 @@ IDEAS
 - Gen-A Refactorings.
 - Al inicio del día 2, discutir sobre preguntas que les vamos a dar?
 - Ejercicios pequeños para marcar de Refactorings y Code Smells.
+
+REFACTORING KATAS
+UI Challenge
+http://xp123.com/rwb/ch17/
+
+GILDED ROSE KATA
+http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/
+http://groups.google.com/group/software_craftsmanship/browse_thread/thread/c428547ee498e226?pli=1
+
+Refactoring-Katas(Some Patterns)
+https://github.com/jcbozonier/Refactoring-Katas

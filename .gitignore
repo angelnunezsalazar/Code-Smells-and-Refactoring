@@ -5,9 +5,5 @@ obj
 # mstest test results
 TestResults
 
-# VS Plugin Files
-ReSharper*
-TeamCity*
-
 # Temporales
 Otros

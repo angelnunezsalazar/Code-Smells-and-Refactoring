@@ -1,0 +1,22 @@
+GIT
+=====
+
+Windows
+-------
+- Crear un usuario en Github
+https://github.com/
+- Instalar Git
+http://windows.github.com/
+
+Linux
+-----
+- Crear un usuario en Github
+https://github.com/
+- Instalar Git
+>>sudo apt-get install git
+>>git --version
+>>git config --global user.name "github user name"
+>>git config --global user.email "github email"
+
+Referencia
+http://www.cristalab.com/tutoriales/introduccion-a-github-en-linux-ubuntu-c106086l/

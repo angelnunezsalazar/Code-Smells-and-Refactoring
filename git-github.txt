@@ -1,6 +1,0 @@
-Windows
-http://windows.github.com/
-
-Linux
-http://www.cristalab.com/tutoriales/introduccion-a-github-en-linux-ubuntu-c106086l/
-http://ixavi.com/blog/2011/08/30/guia-rapida-de-git/

@@ -1,9 +1,3 @@
-MEJORAS DE DINAMICA CODE SMELLS
-- Mejorar la dinámica de conexión (la primera C)
-- Distribución de la sala (no ayudaba a que naturalmente se creen las tribus). 
-  Deberíamos explotar el tema de teer whiteboards en las paredes. (como?)
-- Evitar un solo engament group?
-
 IDEAS
 - Explicar la descripción, causa y el problema.
 - Luego de identificar smells vs refactorings, indentificar los mas usados refactorings.

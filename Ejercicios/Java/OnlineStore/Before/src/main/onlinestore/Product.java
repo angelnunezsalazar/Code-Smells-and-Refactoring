@@ -3,19 +3,19 @@ package onlinestore;
 public class Product {
 
 	/* The Name */
-	public String name;
+	private String name;
 
 	/* The UnitPrice */
-	public float unitPrice;
+	private float unitPrice;
 
 	/* The Category */
-	public Category category;
+	private Category category;
 
 	/* The Image */
-	public ImageInfo image;
+	private ImageInfo image;
 
 	/* The Category */
-	public int unitsInStock;
+	private int unitsInStock;
 
 	public Product(String name, float unitPrice, Category category, ImageInfo image) {
 		this.name = name;

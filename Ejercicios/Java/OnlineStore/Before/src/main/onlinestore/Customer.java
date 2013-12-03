@@ -2,8 +2,8 @@ package onlinestore;
 
 public class Customer extends ThirdParty {
 	
-    public String firstName;
-    public String fastName;
+    private String firstName;
+    private String fastName;
 
     public Customer(String firstName, String lastName, String phoneNumber)
     {
